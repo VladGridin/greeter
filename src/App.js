@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useTelegram } from './hooks/useTelegram';
-
+const {onTogleButton, tg} = useTelegram
 
 function App() {
-  const {onTogleButton, tg} = useTelegram
+  
 
   useEffect( () => {
       tg.ready();

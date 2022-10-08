@@ -1,21 +1,15 @@
-import { useEffect } from 'react';
 import './App.css';
+import { useEffect } from 'react';
 import { useTelegram } from './hooks/useTelegram';
 
 
 function App() {
-   const {tg} = useTelegram
+  const {onToggleButton, tg} = useTelegram();
 
-  // useEffect( () => {
-  //     tg.ready();
-  // }, [])
-  const onToogleButton = () => {
-    if(tg.MainButton.isVisible) {
-        tg.MainButton.hide();
-    } else {
-        tg.MainButton.show();
-    }
-  }
+  useEffect( () => {
+      tg.ready();
+  }, [])
+
   return (
     <div className="App">
       Hello

@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useTelegram } from './hooks/useTelegram';
-const {onTogleButton, tg} = useTelegram
+
 
 function App() {
-  
+  const {tg, onTogleButton} = useTelegram
 
   useEffect( () => {
       tg.ready();
@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      Hello
       <button onClick={onTogleButton}>toogle</button>
     </div>
   );
